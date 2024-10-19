@@ -20,31 +20,42 @@ Crea un fitxer `.env` amb els paràmetres de configuració. Pots fer servir el f
 
 #### Creating
 
-    CREATE USER 'demo'@'%' IDENTIFIED BY 'demo123';
-    create database demo_db1;
-    create database demo_db2;
-    GRANT ALL PRIVILEGES ON `demo_%` . * TO 'demo'@'%';
+```sql
+CREATE USER 'alumne'@'%' IDENTIFIED BY 'secret';
+create database alumne_db1;
+GRANT ALL PRIVILEGES ON `alumne_db1` . * TO 'alumne'@'%';
+create database alumne_db2;
+GRANT ALL PRIVILEGES ON `alumne_db2` . * TO 'alumne'@'%';
+```
 
 #### Cleaning
 
-    drop database demo_db1;
-    drop database demo_db2;
-    drop user demo;
+```sql
+drop database alumne_db1;
+drop database alumne_db2;
+drop user alumne;
+```
 
 ### PostgreSQL
 
 #### Creating
 
-    create role demo login encrypted password 'demo123';
-    create database demo_db1;
-    grant all privileges on database demo_db1 to demo;
-    ALTER DATABASE demo_db1 OWNER TO demo;
-    create database demo_db2;
-    grant all privileges on database demo_db2 to demo;
-    ALTER DATABASE demo_db2 OWNER TO demo;
+```sql
+create role alumne login encrypted password 'secret';
+create database alumne_db1;
+grant all privileges on database alumne_db1 to alumne;
+ALTER DATABASE alumne_db1 OWNER TO alumne;
+create database alumne_db2;
+grant all privileges on database alumne_db2 to alumne;
+ALTER DATABASE alumne_db2 OWNER TO alumne;
+```
 
 #### Cleaning
 
-    drop database demo_db1;
-    drop database demo_db2;
-    drop user demo;
+```sql
+drop database alumne_db1;
+drop database alumne_db2;
+drop user alumne;
+```
+
+
