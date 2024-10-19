@@ -1,6 +1,6 @@
 services:
     nginx:
-        image: nginx:1.27.1
+        image: nginx:1.27.2
         restart: no
         ports:
             - ${IP}:${NGINX_HTTP_PORT}:80
